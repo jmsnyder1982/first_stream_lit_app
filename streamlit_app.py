@@ -46,6 +46,7 @@ streamlit.dataframe(my_data_row)
 
 add_my_fruit = streamlit.text_input('What fruit would you like to add?')
 #get status response of add my fruit call
-add_my_fruit_response = requests.get('https://fruityvice.com/api/fruit/' + add_my_fruit)
 streamlit.write('Thanks for adding ' + add_my_fruit)
 
+#This will not work correctly, but go with it for now
+mycur.execute("insert into fruit_load_list values ('from streamlit')")
